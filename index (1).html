@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ZyberriX Tools – Free PDF Tools Online</title>
+<meta name="description" content="Free online PDF tools – compress, merge, split, convert PDF to JPG, PDF to Word, Word to PDF. No signup, no watermark, 100% browser-based and private."/>
+<meta name="keywords" content="free PDF tools, compress PDF, merge PDF, split PDF, PDF to JPG, PDF to Word, Word to PDF, online PDF converter"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.zyberrix.blog/"/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c63ff'/><text y='.9em' font-size='70' x='15'>📄</text></svg>"/>
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c63ff'/><text y='.9em' font-size='70' x='15'>📄</text></svg>"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.zyberrix.blog/"/>
+<meta property="og:title" content="ZyberriX Tools – Free PDF Tools Online"/>
+<meta property="og:description" content="Compress, merge, split and convert PDFs free. No signup, no watermark, works in your browser."/>
+<meta property="og:image" content="https://www.zyberrix.blog/og-image.png"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ZyberriX Tools – Free PDF Tools Online"/>
+<meta name="twitter:description" content="Compress, merge, split and convert PDFs free. No signup, no watermark."/>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ZyberriX Tools",
+  "url": "https://www.zyberrix.blog",
+  "description": "Free online PDF tools – compress, merge, split, convert PDF to JPG, PDF to Word, Word to PDF.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.zyberrix.blog/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZyberriX Tools",
+  "url": "https://www.zyberrix.blog",
+  "logo": "https://www.zyberrix.blog/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@zyberrix.blog",
+    "contactType": "customer support"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Free PDF Tools",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"PDF Compress","url":"https://www.zyberrix.blog/#compress"},
+    {"@type":"ListItem","position":2,"name":"PDF Merge","url":"https://www.zyberrix.blog/#merge"},
+    {"@type":"ListItem","position":3,"name":"PDF Split","url":"https://www.zyberrix.blog/#split"},
+    {"@type":"ListItem","position":4,"name":"PDF to JPG","url":"https://www.zyberrix.blog/#to-jpg"},
+    {"@type":"ListItem","position":5,"name":"PDF to Word","url":"https://www.zyberrix.blog/#to-word"},
+    {"@type":"ListItem","position":6,"name":"Word to PDF","url":"https://www.zyberrix.blog/#word-to-pdf"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+:root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--card:#1c1c26;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#6c63ff;--accent2:#a78bfa;--accent3:#38bdf8;--green:#34d399;--red:#f87171;--text:#f0f0f8;--text2:#9090b0;--text3:#5a5a7a;--radius:14px;--radius-sm:8px;--font-head:'Syne',sans-serif;--font-body:'DM Sans',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% -10%,rgba(108,99,255,0.15),transparent),radial-gradient(ellipse 60% 40% at 80% 110%,rgba(56,189,248,0.1),transparent);pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--font-head);font-weight:800;font-size:20px;letter-spacing:-0.5px;background:linear-gradient(135deg,#6c63ff,#a78bfa,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;cursor:pointer;text-decoration:none;display:flex;align-items:center}
+.logo span{color:var(--text2);font-weight:400;font-size:13px;margin-left:6px;-webkit-text-fill-color:var(--text2);background:none}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-link{font-size:13px;color:var(--text2);text-decoration:none;cursor:pointer;transition:color 0.2s;background:none;border:none;font-family:var(--font-body)}
+.nav-link:hover{color:var(--accent2)}
+.nav-badge{font-size:11px;font-weight:500;background:rgba(108,99,255,0.15);color:var(--accent2);border:1px solid rgba(108,99,255,0.3);padding:4px 10px;border-radius:20px}
+
+/* HERO */
+.hero{position:relative;z-index:1;text-align:center;padding:72px 24px 56px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--accent2);background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);padding:5px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:0.05em;text-transform:uppercase}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+h1{font-family:var(--font-head);font-size:clamp(36px,6vw,68px);font-weight:800;line-height:1.08;letter-spacing:-2px;margin-bottom:20px}
+h1 .line2{background:linear-gradient(90deg,#6c63ff,#a78bfa 40%,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:17px;color:var(--text2);max-width:520px;margin:0 auto 32px;font-weight:300;line-height:1.7}
+.hero-stats{display:flex;justify-content:center;gap:40px;font-size:13px;color:var(--text3)}
+.hero-stats strong{display:block;font-family:var(--font-head);font-size:22px;font-weight:700;color:var(--text);margin-bottom:2px}
+
+/* TOOLS */
+.tools-section{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px 80px}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;cursor:pointer;transition:all 0.25s ease;position:relative;overflow:hidden}
+.tool-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(108,99,255,0.06),transparent 60%);opacity:0;transition:opacity 0.25s}
+.tool-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.tool-card:hover::before{opacity:1}
+.tool-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.icon-purple{background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.25)}
+.icon-blue{background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.2)}
+.icon-green{background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.2)}
+.icon-amber{background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.2)}
+.icon-pink{background:rgba(244,114,182,0.12);border:1px solid rgba(244,114,182,0.2)}
+.icon-teal{background:rgba(45,212,191,0.12);border:1px solid rgba(45,212,191,0.2)}
+.tool-card h3{font-family:var(--font-head);font-size:17px;font-weight:700;margin-bottom:6px;letter-spacing:-0.3px}
+.tool-card p{font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:16px}
+.tool-badge{display:inline-block;font-size:11px;font-weight:500;padding:3px 9px;border-radius:20px;background:rgba(52,211,153,0.1);color:var(--green);border:1px solid rgba(52,211,153,0.2)}
+.tool-arrow{position:absolute;top:28px;right:28px;width:28px;height:28px;border-radius:8px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;transition:all 0.2s}
+.tool-card:hover .tool-arrow{background:var(--accent);transform:translate(2px,-2px)}
+
+/* MODAL / OVERLAY */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.overlay.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;width:100%;max-width:640px;max-height:90vh;overflow-y:auto;animation:slideUp 0.3s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.modal-header{padding:24px 28px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.modal-header h2{font-family:var(--font-head);font-size:20px;font-weight:700;letter-spacing:-0.3px}
+.modal-close{width:32px;height:32px;border-radius:8px;background:var(--bg3);border:1px solid var(--border);color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s}
+.modal-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.modal-body{padding:28px}
+.dropzone{border:2px dashed var(--border2);border-radius:var(--radius);padding:48px 24px;text-align:center;cursor:pointer;transition:all 0.2s;background:var(--bg3);position:relative}
+.dropzone:hover,.dropzone.dragover{border-color:var(--accent);background:rgba(108,99,255,0.05)}
+.dropzone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.drop-icon{font-size:40px;margin-bottom:12px}
+.drop-title{font-family:var(--font-head);font-size:16px;font-weight:600;margin-bottom:6px}
+.drop-sub{font-size:13px;color:var(--text2)}
+.file-formats{display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.format-tag{font-size:11px;font-weight:500;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,0.06);color:var(--text2);border:1px solid var(--border)}
+.file-list{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.file-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;display:flex;align-items:center;gap:12px}
+.file-item-icon{font-size:20px}
+.file-item-name{flex:1;font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-item-size{font-size:12px;color:var(--text3)}
+.file-item-remove{width:24px;height:24px;border-radius:6px;background:rgba(248,113,113,0.1);border:none;color:var(--red);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:background 0.2s}
+.file-item-remove:hover{background:rgba(248,113,113,0.25)}
+.controls{margin-top:20px;display:flex;flex-direction:column;gap:12px}
+.control-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.control-label{font-size:13px;font-weight:500;color:var(--text2)}
+.control-select{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--text);padding:8px 12px;font-size:13px;font-family:var(--font-body);cursor:pointer;outline:none}
+.control-select:focus{border-color:var(--accent)}
+.control-input{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--text);padding:8px 12px;font-size:13px;font-family:var(--font-body);width:100px;outline:none;text-align:center}
+.control-input:focus{border-color:var(--accent)}
+.range-wrap{flex:1;display:flex;align-items:center;gap:10px}
+input[type=range]{flex:1;accent-color:var(--accent)}
+.range-val{font-size:12px;color:var(--accent2);font-weight:500;min-width:30px;text-align:right}
+.btn-primary{width:100%;padding:14px;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--accent),#8b5cf6);border:none;color:#fff;font-family:var(--font-head);font-size:15px;font-weight:700;cursor:pointer;transition:all 0.2s;letter-spacing:-0.2px;margin-top:20px}
+.btn-primary:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 8px 24px rgba(108,99,255,0.35)}
+.btn-primary:disabled{opacity:0.4;cursor:not-allowed;transform:none}
+.btn-secondary{padding:10px 20px;border-radius:var(--radius-sm);background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.3);color:var(--green);font-family:var(--font-body);font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block}
+.btn-secondary:hover{background:rgba(52,211,153,0.2)}
+.progress-wrap{margin-top:20px;display:none}
+.progress-wrap.show{display:block}
+.progress-bar-bg{height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;margin-bottom:8px}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:3px;transition:width 0.4s ease;width:0%}
+.progress-text{font-size:12px;color:var(--text2);text-align:center}
+.result-box{margin-top:20px;background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.2);border-radius:var(--radius-sm);padding:16px;display:none;text-align:center}
+.result-box.show{display:block}
+.result-title{font-family:var(--font-head);font-weight:700;font-size:15px;color:var(--green);margin-bottom:4px}
+.result-info{font-size:12px;color:var(--text2);margin-bottom:12px}
+.result-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.error-box{margin-top:16px;background:rgba(248,113,113,0.07);border:1px solid rgba(248,113,113,0.2);border-radius:var(--radius-sm);padding:12px 16px;display:none;font-size:13px;color:var(--red)}
+.error-box.show{display:block}
+.info-row{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.info-chip{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,0.05);color:var(--text2);border:1px solid var(--border)}
+.info-note{font-size:13px;color:var(--text2);padding:10px 14px;background:var(--bg3);border-radius:8px;border:1px solid var(--border)}
+.warn-note{font-size:13px;color:#fbbf24;padding:10px 14px;background:rgba(251,191,36,0.07);border-radius:8px;border:1px solid rgba(251,191,36,0.2)}
+.page-count-badge{display:inline-block;font-size:12px;color:var(--accent2);margin-top:8px}
+.ad-zone{background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius-sm);padding:20px;text-align:center;margin:32px 0;color:var(--text3);font-size:12px}
+.ad-zone span{display:block;font-size:11px;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.08em}
+
+/* FOOTER */
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:40px 24px;text-align:center}
+.footer-logo{font-family:var(--font-head);font-weight:800;font-size:18px;background:linear-gradient(135deg,#6c63ff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.footer-text{font-size:13px;color:var(--text3);margin-bottom:20px}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.2s;cursor:pointer}
+.footer-links a:hover{color:var(--accent2)}
+
+/* STATIC PAGES */
+.page-section{display:none;position:relative;z-index:1;max-width:800px;margin:0 auto;padding:48px 24px 80px}
+.page-section.active{display:block}
+.page-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);cursor:pointer;margin-bottom:32px;background:none;border:none;font-family:var(--font-body);transition:color 0.2s}
+.page-back:hover{color:var(--accent2)}
+.page-title{font-family:var(--font-head);font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;margin-bottom:8px}
+.page-date{font-size:13px;color:var(--text3);margin-bottom:36px}
+.page-body h2{font-family:var(--font-head);font-size:20px;font-weight:700;margin:32px 0 12px;color:var(--text)}
+.page-body h3{font-family:var(--font-head);font-size:16px;font-weight:600;margin:20px 0 8px;color:var(--accent2)}
+.page-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+.page-body ul{padding-left:20px;margin-bottom:16px}
+.page-body ul li{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:6px}
+.page-body a{color:var(--accent2);text-decoration:none}
+.page-body a:hover{text-decoration:underline}
+.page-body .highlight-box{background:var(--card);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:16px 20px;margin:20px 0}
+
+/* CONTACT FORM */
+.contact-form{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:13px;font-weight:500;color:var(--text2)}
+.form-input,.form-textarea{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--text);padding:12px 14px;font-size:14px;font-family:var(--font-body);outline:none;transition:border-color 0.2s;width:100%}
+.form-input:focus,.form-textarea:focus{border-color:var(--accent)}
+.form-textarea{min-height:120px;resize:vertical}
+.form-success{background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.25);border-radius:var(--radius-sm);padding:16px;text-align:center;color:var(--green);font-size:14px;display:none}
+.form-success.show{display:block}
+
+@media(max-width:600px){h1{font-size:36px;letter-spacing:-1px}.tools-grid{grid-template-columns:1fr}.modal{max-height:100vh;border-radius:16px 16px 0 0;margin-top:auto}.hero-stats{gap:20px}.nav-link{display:none}}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a class="logo" href="/" onclick="event.preventDefault();showPage('home')">ZyberriX<span>Tools</span></a>
+  <div class="nav-right">
+    <a class="nav-link" href="/about" onclick="event.preventDefault();showPage('about')">About</a>
+    <a class="nav-link" href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
+    <span class="nav-badge">✦ 100% Free</span>
+  </div>
+</nav>
+
+<!-- =================== HOME PAGE =================== -->
+<div id="page-home">
+
+<section class="hero">
+  <div class="hero-eyebrow">No signup · No watermark · Works offline</div>
+  <h1>Free PDF Tools<br><span class="line2">That Actually Work</span></h1>
+  <p class="hero-sub">Compress, merge, split and convert PDF files — right in your browser. Zero uploads, complete privacy.</p>
+  <div class="hero-stats">
+    <div><strong>6</strong> Free Tools</div>
+    <div><strong>100%</strong> Browser-based</div>
+    <div><strong>0</strong> Signup needed</div>
+  </div>
+</section>
+
+<div style="max-width:1100px;margin:0 auto;padding:0 24px">
+  <div class="ad-zone"><span>Advertisement</span><!-- AdSense code here --></div>
+</div>
+
+<section class="tools-section">
+  <div class="tools-grid">
+    <div class="tool-card" onclick="openTool('compress')" id="compress">
+      <div class="tool-icon icon-purple">📦</div><div class="tool-arrow">→</div>
+      <h3>PDF Compress</h3>
+      <p>Reduce PDF file size without losing quality. Perfect for email attachments.</p>
+      <span class="tool-badge">✓ Browser-based</span>
+    </div>
+    <div class="tool-card" onclick="openTool('merge')" id="merge">
+      <div class="tool-icon icon-blue">🔗</div><div class="tool-arrow">→</div>
+      <h3>PDF Merge</h3>
+      <p>Combine multiple PDF files into one document in any order you want.</p>
+      <span class="tool-badge">✓ Up to 20 files</span>
+    </div>
+    <div class="tool-card" onclick="openTool('split')" id="split">
+      <div class="tool-icon icon-green">✂️</div><div class="tool-arrow">→</div>
+      <h3>PDF Split</h3>
+      <p>Split a PDF by page range or extract every page into separate files.</p>
+      <span class="tool-badge">✓ Custom ranges</span>
+    </div>
+    <div class="tool-card" onclick="openTool('to-jpg')" id="to-jpg">
+      <div class="tool-icon icon-amber">🖼️</div><div class="tool-arrow">→</div>
+      <h3>PDF to JPG</h3>
+      <p>Convert each PDF page to a high-quality JPG image. Download all as ZIP.</p>
+      <span class="tool-badge">✓ ZIP download</span>
+    </div>
+    <div class="tool-card" onclick="openTool('to-word')" id="to-word">
+      <div class="tool-icon icon-teal">📝</div><div class="tool-arrow">→</div>
+      <h3>PDF to Word</h3>
+      <p>Extract all text from PDF pages and download as a clean .txt file for Word.</p>
+      <span class="tool-badge">✓ Text extraction</span>
+    </div>
+    <div class="tool-card" onclick="openTool('word-to-pdf')" id="word-to-pdf">
+      <div class="tool-icon icon-pink">📄</div><div class="tool-arrow">→</div>
+      <h3>Word to PDF</h3>
+      <p>Convert .docx, .txt or .html files to clean PDF documents instantly.</p>
+      <span class="tool-badge">✓ .docx supported</span>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:1100px;margin:0 auto;padding:0 24px">
+  <div class="ad-zone"><span>Advertisement</span><!-- AdSense code here --></div>
+</div>
+
+<footer>
+  <div class="footer-logo">ZyberriX Tools</div>
+  <p class="footer-text">Free PDF tools for everyone · No data is uploaded to any server</p>
+  <div class="footer-links">
+    <a href="/privacy-policy" onclick="event.preventDefault();showPage('privacy')">Privacy Policy</a>
+    <a href="/terms-of-use" onclick="event.preventDefault();showPage('terms')">Terms of Use</a>
+    <a href="/about" onclick="event.preventDefault();showPage('about')">About</a>
+    <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
+    <a href="https://zyberrix.blog" target="_blank" rel="noopener">Blog</a>
+  </div>
+</footer>
+
+</div><!-- end page-home -->
+
+<!-- =================== PRIVACY POLICY PAGE =================== -->
+<div id="page-privacy" style="display:none" aria-hidden="true">
+<div class="page-section active">
+  <button class="page-back" onclick="showPage('home')">← Back to Tools</button>
+  <h2 class="page-title">Privacy Policy</h2>
+  <p class="page-date">Last updated: June 2025</p>
+  <div class="page-body">
+    <div class="highlight-box">
+      <strong style="color:var(--green)">🔒 Short version:</strong> Your files never leave your device. We do not upload, store, or share anything you process on this site.
+    </div>
+    <h2>1. Who We Are</h2>
+    <p>ZyberriX Tools is a free, browser-based PDF utility service operated at <strong>zyberrix.blog</strong>. We are committed to protecting your privacy.</p>
+
+    <h2>2. What Data We Collect</h2>
+    <h3>Files You Upload</h3>
+    <p>All file processing on ZyberriX Tools happens entirely inside your browser using JavaScript. Your PDF, Word, or image files are <strong>never sent to any server</strong>. We have zero access to your documents.</p>
+    <h3>Usage Data</h3>
+    <p>We may collect anonymous usage statistics (pages visited, tools used, browser type) via Google Analytics to improve the service. This data does not identify you personally.</p>
+    <h3>Cookies</h3>
+    <p>We use cookies for analytics and advertising purposes (Google AdSense). You can disable cookies in your browser settings at any time.</p>
+
+    <h2>3. Advertising</h2>
+    <p>This site uses Google AdSense to display ads. Google may use cookies to show you relevant advertisements. You can opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a>.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <ul>
+      <li><strong>Google Analytics</strong> — anonymous traffic analysis</li>
+      <li><strong>Google AdSense</strong> — advertising</li>
+      <li><strong>Google Fonts</strong> — typography (fonts loaded from Google servers)</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>ZyberriX Tools is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this policy occasionally. Changes will be reflected on this page with an updated date.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have questions about this policy, contact us at <a href="mailto:contact@zyberrix.blog">contact@zyberrix.blog</a>.</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="/privacy-policy" onclick="event.preventDefault();showPage('privacy')">Privacy Policy</a>
+    <a href="/terms-of-use" onclick="event.preventDefault();showPage('terms')">Terms of Use</a>
+    <a href="/about" onclick="event.preventDefault();showPage('about')">About</a>
+    <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
+  </div>
+</footer>
+</div>
+
+<!-- =================== TERMS OF USE PAGE =================== -->
+<div id="page-terms" style="display:none" aria-hidden="true">
+<div class="page-section active">
+  <button class="page-back" onclick="showPage('home')">← Back to Tools</button>
+  <h2 class="page-title">Terms of Use</h2>
+  <p class="page-date">Last updated: June 2025</p>
+  <div class="page-body">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By using ZyberriX Tools at zyberrix.blog, you agree to these Terms of Use. If you do not agree, please do not use the service.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>ZyberriX Tools provides free, browser-based PDF tools including PDF compression, merging, splitting, and file conversion. All processing occurs locally in your browser — no files are uploaded to our servers.</p>
+
+    <h2>3. Acceptable Use</h2>
+    <p>You agree to use ZyberriX Tools only for lawful purposes. You must not:</p>
+    <ul>
+      <li>Process files that contain illegal content</li>
+      <li>Attempt to reverse engineer, hack, or disrupt the service</li>
+      <li>Use the service in any way that violates applicable laws</li>
+      <li>Process copyrighted material without authorization</li>
+    </ul>
+
+    <h2>4. Intellectual Property</h2>
+    <p>All content, design, and code on ZyberriX Tools is owned by ZyberriX. You may not copy, reproduce, or redistribute any part of the site without permission.</p>
+
+    <h2>5. Disclaimer of Warranties</h2>
+    <p>ZyberriX Tools is provided "as is" without warranties of any kind. We do not guarantee that the service will always be available, error-free, or produce results meeting your specific requirements.</p>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>ZyberriX Tools shall not be liable for any damages arising from your use of or inability to use the service, including any loss of data.</p>
+
+    <h2>7. Privacy</h2>
+    <p>Your use of the service is also governed by our <a href="/privacy-policy" onclick="event.preventDefault();showPage('privacy')">Privacy Policy</a>.</p>
+
+    <h2>8. Changes to Terms</h2>
+    <p>We reserve the right to update these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions? Email us at <a href="mailto:contact@zyberrix.blog">contact@zyberrix.blog</a>.</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="/privacy-policy" onclick="event.preventDefault();showPage('privacy')">Privacy Policy</a>
+    <a href="/terms-of-use" onclick="event.preventDefault();showPage('terms')">Terms of Use</a>
+    <a href="/about" onclick="event.preventDefault();showPage('about')">About</a>
+    <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
+  </div>
+</footer>
+</div>
+
+<!-- =================== ABOUT PAGE =================== -->
+<div id="page-about" style="display:none" aria-hidden="true">
+<div class="page-section active">
+  <button class="page-back" onclick="showPage('home')">← Back to Tools</button>
+  <h2 class="page-title">About ZyberriX Tools</h2>
+  <p class="page-date">Free PDF tools for everyone</p>
+  <div class="page-body">
+    <p>ZyberriX Tools is a free, privacy-first collection of PDF utilities built for people who need fast, reliable file processing without the hassle of signups, subscriptions, or uploading sensitive documents to unknown servers.</p>
+
+    <div class="highlight-box">
+      <strong style="color:var(--accent2)">Our Mission:</strong> Make professional-grade PDF tools accessible to everyone, for free, forever.
+    </div>
+
+    <h2>Why ZyberriX Tools?</h2>
+    <ul>
+      <li><strong>100% Private</strong> — All processing happens in your browser. Your files never leave your device.</li>
+      <li><strong>No Signup Required</strong> — Use any tool instantly, no account needed.</li>
+      <li><strong>No Watermarks</strong> — Your output files are clean and professional.</li>
+      <li><strong>Always Free</strong> — Our tools are free to use, supported by advertising.</li>
+      <li><strong>Works Offline</strong> — Once loaded, many tools work without internet.</li>
+    </ul>
+
+    <h2>Our Tools</h2>
+    <ul>
+      <li><strong>PDF Compress</strong> — Reduce file sizes for faster sharing</li>
+      <li><strong>PDF Merge</strong> — Combine multiple PDFs into one</li>
+      <li><strong>PDF Split</strong> — Extract pages or split into separate files</li>
+      <li><strong>PDF to JPG</strong> — Convert PDF pages to images</li>
+      <li><strong>PDF to Word</strong> — Extract text from PDFs</li>
+      <li><strong>Word to PDF</strong> — Convert Word/text documents to PDF</li>
+    </ul>
+
+    <h2>Technology</h2>
+    <p>ZyberriX Tools is built using modern browser APIs and open-source libraries including PDF.js, pdf-lib, Mammoth.js, and JSZip — all running entirely client-side for maximum privacy and speed.</p>
+
+    <h2>Get in Touch</h2>
+    <p>Have feedback or a feature request? We would love to hear from you. <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact us here</a>.</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="/privacy-policy" onclick="event.preventDefault();showPage('privacy')">Privacy Policy</a>
+    <a href="/terms-of-use" onclick="event.preventDefault();showPage('terms')">Terms of Use</a>
+    <a href="/about" onclick="event.preventDefault();showPage('about')">About</a>
+    <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
+  </div>
+</footer>
+</div>
+
+<!-- =================== CONTACT PAGE =================== -->
+<div id="page-contact" style="display:none" aria-hidden="true">
+<div class="page-section active">
+  <button class="page-back" onclick="showPage('home')">← Back to Tools</button>
+  <h2 class="page-title">Contact Us</h2>
+  <p class="page-date">We'd love to hear from you</p>
+  <div class="page-body">
+    <p>Have a question, found a bug, or want to suggest a new PDF tool? Send us a message and we'll get back to you as soon as possible.</p>
+
+    <div class="highlight-box">
+      📧 You can also email us directly at <a href="mailto:contact@zyberrix.blog">contact@zyberrix.blog</a>
+    </div>
+
+    <div class="contact-form" id="contact-form">
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-input" id="cf-name" placeholder="Enter your name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" id="cf-email" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <input type="text" class="form-input" id="cf-subject" placeholder="e.g. Bug report / Feature request"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" id="cf-message" placeholder="Tell us what's on your mind..."></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitContactForm()" style="margin-top:8px">Send Message →</button>
+    </div>
+    <div class="form-success" id="form-success">
+      ✅ Thank you! Your message has been sent. We'll get back to you soon.
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="/privacy-policy" onclick="event.preventDefault();showPage('privacy')">Privacy Policy</a>
+    <a href="/terms-of-use" onclick="event.preventDefault();showPage('terms')">Terms of Use</a>
+    <a href="/about" onclick="event.preventDefault();showPage('about')">About</a>
+    <a href="/contact" onclick="event.preventDefault();showPage('contact')">Contact</a>
+  </div>
+</footer>
+</div>
+
+<!-- =================== TOOL MODAL =================== -->
+<div class="overlay" id="overlay" onclick="closeIfBg(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Tool</h2>
+      <button class="modal-close" onclick="closeTool()">×</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ─── PAGE NAVIGATION ───
+const pageMap = {
+  'home': 'home',
+  'privacy': 'privacy',
+  'privacy-policy': 'privacy',
+  'terms': 'terms',
+  'terms-of-use': 'terms',
+  'about': 'about',
+  'contact': 'contact'
+};
+
+function showPage(name) {
+  const target = pageMap[name] || 'home';
+  const pages = ['home','privacy','terms','about','contact'];
+  pages.forEach(p => {
+    const el = document.getElementById('page-'+p);
+    if (el) {
+      const show = (p === target);
+      el.style.display = show ? 'block' : 'none';
+      el.setAttribute('aria-hidden', show ? 'false' : 'true');
+    }
+  });
+  window.scrollTo(0,0);
+  // Update URL without reload for clean navigation
+  const slug = target === 'home' ? '/' :
+    target === 'privacy' ? '/privacy-policy' :
+    target === 'terms' ? '/terms-of-use' : '/'+target;
+  history.pushState({page: target}, '', slug);
+}
+
+// Handle browser back/forward
+window.addEventListener('popstate', (e) => {
+  const page = e.state?.page || 'home';
+  showPage(page);
+});
+
+// Handle direct URL on load
+window.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname.replace(/\/$/, '') || '/';
+  const slug = path.replace(/^\//, '');
+  if (slug && pageMap[slug]) showPage(slug);
+});
+
+function submitContactForm() {
+  const name = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg = document.getElementById('cf-message').value.trim();
+  if (!name || !email || !msg) { alert('Please fill in all required fields.'); return; }
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('form-success').classList.add('show');
+}
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+const { PDFDocument, rgb, StandardFonts, degrees } = PDFLib;
+
+let currentFiles = [];
+let resultBlobs = [];
+let activeTool = null;
+
+// ─── TOOL DEFINITIONS ───
+const TOOLS = {
+  'compress': {
+    title: '📦 PDF Compress',
+    formats: ['PDF'], multiple: false, accept: '.pdf',
+    controls: `
+      <div class="control-row">
+        <span class="control-label">Compression level</span>
+        <div class="range-wrap">
+          <input type="range" id="compress-level" min="1" max="3" value="2"
+            oninput="document.getElementById('clv').textContent=['Low','Medium','High'][this.value-1]">
+          <span class="range-val" id="clv">Medium</span>
+        </div>
+      </div>`,
+    run: compressPDF
+  },
+  'merge': {
+    title: '🔗 PDF Merge',
+    formats: ['PDF'], multiple: true, accept: '.pdf',
+    controls: `<div class="info-note">ℹ️ Upload 2 or more PDFs. They will be merged in the order listed. You can remove any file before merging.</div>`,
+    run: mergePDF
+  },
+  'split': {
+    title: '✂️ PDF Split',
+    formats: ['PDF'], multiple: false, accept: '.pdf',
+    controls: `
+      <div class="control-row">
+        <span class="control-label">Split mode</span>
+        <select class="control-select" id="split-mode" onchange="toggleSplitMode()">
+          <option value="range">Extract page range</option>
+          <option value="all">Every page separately</option>
+        </select>
+      </div>
+      <div id="split-range-row" class="control-row">
+        <span class="control-label">Pages (e.g. 1-3, 5, 7)</span>
+        <input type="text" class="control-input" id="split-pages" placeholder="1-3, 5" style="width:150px">
+      </div>
+      <div id="split-page-info" class="page-count-badge"></div>`,
+    run: splitPDF
+  },
+  'to-jpg': {
+    title: '🖼️ PDF to JPG',
+    formats: ['PDF'], multiple: false, accept: '.pdf',
+    controls: `
+      <div class="control-row">
+        <span class="control-label">Image quality (scale)</span>
+        <div class="range-wrap">
+          <input type="range" id="jpg-scale" min="1" max="3" value="2" step="0.5"
+            oninput="document.getElementById('jqv').textContent=this.value+'×'">
+          <span class="range-val" id="jqv">2×</span>
+        </div>
+      </div>
+      <div class="control-row">
+        <span class="control-label">Pages to convert</span>
+        <select class="control-select" id="jpg-pages">
+          <option value="all">All pages</option>
+          <option value="first">First page only</option>
+        </select>
+      </div>
+      <div class="warn-note">⚡ Multiple pages will be downloaded as a ZIP file.</div>`,
+    run: pdfToJpg
+  },
+  'to-word': {
+    title: '📝 PDF to Word (Text)',
+    formats: ['PDF'], multiple: false, accept: '.pdf',
+    controls: `
+      <div class="info-note">ℹ️ Extracts all readable text from your PDF and saves it as a .txt file you can open in Microsoft Word or any text editor.</div>
+      <div class="control-row" style="margin-top:8px">
+        <span class="control-label">Page separator</span>
+        <select class="control-select" id="sep-style">
+          <option value="dashes">--- Page N ---</option>
+          <option value="newlines">Blank lines only</option>
+          <option value="none">No separator</option>
+        </select>
+      </div>`,
+    run: pdfToWord
+  },
+  'word-to-pdf': {
+    title: '📄 Word / Text to PDF',
+    formats: ['DOCX','TXT','HTML'], multiple: false, accept: '.docx,.txt,.html,.htm',
+    controls: `
+      <div class="info-note">ℹ️ Supports <strong style="color:var(--accent2)">.docx</strong>, .txt and .html files. All text is preserved accurately.</div>
+      <div class="control-row" style="margin-top:8px">
+        <span class="control-label">Font size</span>
+        <select class="control-select" id="w2p-size">
+          <option value="12">12pt — Normal</option>
+          <option value="11">11pt — Compact</option>
+          <option value="14">14pt — Large</option>
+        </select>
+      </div>
+      <div class="control-row">
+        <span class="control-label">Page size</span>
+        <select class="control-select" id="w2p-page">
+          <option value="a4">A4</option>
+          <option value="letter">US Letter</option>
+        </select>
+      </div>`,
+    run: wordToPDF
+  }
+};
+
+// ─── UI HELPERS ───
+function openTool(key) {
+  activeTool = key;
+  currentFiles = [];
+  resultBlobs = [];
+  const t = TOOLS[key];
+  document.getElementById('modal-title').textContent = t.title;
+  document.getElementById('modal-body').innerHTML = buildModalBody(t);
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function buildModalBody(t) {
+  return `
+    <div class="info-row">
+      <span class="info-chip">🔒 100% local — no upload</span>
+      <span class="info-chip">✓ Free forever</span>
+      <span class="info-chip">⚡ Instant</span>
+    </div>
+    <div class="dropzone" id="dropzone"
+      ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
+      <input type="file" accept="${t.accept}" ${t.multiple ? 'multiple' : ''}
+        id="file-input" onchange="onFileChange(event)"/>
+      <div class="drop-icon">📂</div>
+      <div class="drop-title">Drop file${t.multiple?'s':''} here or click to browse</div>
+      <div class="drop-sub">Max 100MB per file</div>
+      <div class="file-formats">
+        ${t.formats.map(f=>`<span class="format-tag">${f}</span>`).join('')}
+      </div>
+    </div>
+    <div class="file-list" id="file-list"></div>
+    <div class="controls">${t.controls}</div>
+    <div class="error-box" id="error-box"></div>
+    <button class="btn-primary" id="run-btn" onclick="runTool()" disabled>
+      Process &amp; Download →
+    </button>
+    <div class="progress-wrap" id="progress-wrap">
+      <div class="progress-bar-bg"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="progress-text" id="progress-text">Processing…</div>
+    </div>
+    <div class="result-box" id="result-box">
+      <div class="result-title">✅ Done! Ready to download</div>
+      <div class="result-info" id="result-info"></div>
+      <div class="result-btns" id="result-btns"></div>
+    </div>`;
+}
+
+function closeTool() {
+  document.getElementById('overlay').classList.remove('open');
+  document.body.style.overflow = '';
+  currentFiles = []; resultBlobs = []; activeTool = null;
+}
+function closeIfBg(e) { if (e.target===document.getElementById('overlay')) closeTool(); }
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeTool(); });
+
+// ─── FILE HANDLING ───
+function onDragOver(e) { e.preventDefault(); document.getElementById('dropzone').classList.add('dragover'); }
+function onDragLeave()  { document.getElementById('dropzone').classList.remove('dragover'); }
+function onDrop(e) {
+  e.preventDefault();
+  document.getElementById('dropzone').classList.remove('dragover');
+  addFiles(Array.from(e.dataTransfer.files));
+}
+function onFileChange(e) { addFiles(Array.from(e.target.files)); }
+
+function addFiles(files) {
+  const t = TOOLS[activeTool];
+  if (!t.multiple) currentFiles = [];
+  for (const f of files) {
+    if (!currentFiles.find(x => x.name === f.name && x.size === f.size)) currentFiles.push(f);
+  }
+  renderFileList();
+  document.getElementById('run-btn').disabled = currentFiles.length === 0;
+  hideError(); hideResult();
+}
+
+function removeFile(i) {
+  currentFiles.splice(i, 1);
+  renderFileList();
+  document.getElementById('run-btn').disabled = currentFiles.length === 0;
+}
+
+function renderFileList() {
+  const el = document.getElementById('file-list');
+  if (!el) return;
+  el.innerHTML = currentFiles.map((f,i) => `
+    <div class="file-item">
+      <span class="file-item-icon">${getFileIcon(f.name)}</span>
+      <span class="file-item-name">${f.name}</span>
+      <span class="file-item-size">${formatSize(f.size)}</span>
+      <button class="file-item-remove" onclick="removeFile(${i})">✕</button>
+    </div>`).join('');
+}
+
+function getFileIcon(name) {
+  const ext = name.split('.').pop().toLowerCase();
+  if (ext==='pdf') return '📄';
+  if (ext==='docx') return '📝';
+  if (['html','htm'].includes(ext)) return '🌐';
+  return '📃';
+}
+
+function formatSize(b) {
+  if (b < 1024) return b+' B';
+  if (b < 1048576) return (b/1024).toFixed(1)+' KB';
+  return (b/1048576).toFixed(2)+' MB';
+}
+
+// ─── PROGRESS / RESULT / ERROR ───
+function setProgress(pct, text) {
+  const pw = document.getElementById('progress-wrap');
+  if (pw) {
+    pw.classList.add('show');
+    document.getElementById('progress-bar').style.width = pct+'%';
+    document.getElementById('progress-text').textContent = text;
+  }
+}
+function showError(msg) {
+  const el = document.getElementById('error-box');
+  if (el) { el.textContent = '⚠️ '+msg; el.classList.add('show'); }
+  const pw = document.getElementById('progress-wrap');
+  if (pw) pw.classList.remove('show');
+}
+function hideError() { const el=document.getElementById('error-box'); if(el) el.classList.remove('show'); }
+
+function showResult(info, blobs) {
+  resultBlobs = blobs;
+  const rb = document.getElementById('result-box');
+  const ri = document.getElementById('result-info');
+  const rbtns = document.getElementById('result-btns');
+  if (!rb) return;
+  ri.textContent = info;
+  rbtns.innerHTML = blobs.map((b,i) =>
+    `<button class="btn-secondary" onclick="downloadBlob(${i})">⬇ Download ${blobs.length>1?'('+(i+1)+')':''} ${formatSize(b.blob.size)}</button>`
+  ).join('');
+  rb.classList.add('show');
+  document.getElementById('progress-wrap').classList.remove('show');
+}
+function hideResult() { const el=document.getElementById('result-box'); if(el) el.classList.remove('show'); }
+
+function downloadBlob(i) {
+  const {blob, name} = resultBlobs[i];
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+
+async function runTool() {
+  if (!activeTool || !currentFiles.length) return;
+  hideError(); hideResult();
+  document.getElementById('run-btn').disabled = true;
+  document.getElementById('progress-wrap').classList.remove('show');
+  setProgress(5, 'Starting…');
+  try { await TOOLS[activeTool].run(); }
+  catch(e) { showError(e.message || 'Something went wrong. Please try again.'); console.error(e); }
+  document.getElementById('run-btn').disabled = false;
+}
+
+function readFile(file) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = e => res(e.target.result);
+    r.onerror = () => rej(new Error('Failed to read file'));
+    r.readAsArrayBuffer(file);
+  });
+}
+
+function toggleSplitMode() {
+  const mode = document.getElementById('split-mode')?.value;
+  const row = document.getElementById('split-range-row');
+  if (row) row.style.display = mode==='all' ? 'none' : 'flex';
+}
+
+// ─────────────────────────────────────────
+// 1. PDF COMPRESS
+// ─────────────────────────────────────────
+async function compressPDF() {
+  setProgress(15, 'Loading PDF…');
+  const buf = await readFile(currentFiles[0]);
+  setProgress(45, 'Optimizing PDF structure…');
+  const src = await PDFDocument.load(buf, { ignoreEncryption: true });
+  const out = await PDFDocument.create();
+  const pages = await out.copyPages(src, src.getPageIndices());
+  pages.forEach(p => out.addPage(p));
+  const level = parseInt(document.getElementById('compress-level')?.value || 2);
+  const opts = level === 3
+    ? { useObjectStreams: true, addDefaultPage: false, objectsPerTick: 20 }
+    : level === 1
+    ? { useObjectStreams: false }
+    : { useObjectStreams: true };
+  setProgress(80, 'Saving compressed PDF…');
+  const bytes = await out.save(opts);
+  setProgress(100, 'Done!');
+  const orig = buf.byteLength, comp = bytes.byteLength;
+  const saved = Math.max(0, Math.round((1 - comp/orig)*100));
+  const blob = new Blob([bytes], {type:'application/pdf'});
+  const baseName = currentFiles[0].name.replace(/\.pdf$/i,'');
+  showResult(`Original: ${formatSize(orig)} → Compressed: ${formatSize(comp)} (${saved}% saved)`,
+    [{blob, name: baseName+'_compressed.pdf'}]);
+}
+
+// ─────────────────────────────────────────
+// 2. PDF MERGE
+// ─────────────────────────────────────────
+async function mergePDF() {
+  if (currentFiles.length < 2) { showError('Please add at least 2 PDF files to merge.'); return; }
+  const out = await PDFDocument.create();
+  for (let i = 0; i < currentFiles.length; i++) {
+    setProgress(Math.round(10 + (i/currentFiles.length)*80), `Merging file ${i+1} of ${currentFiles.length}…`);
+    const buf = await readFile(currentFiles[i]);
+    const src = await PDFDocument.load(buf, { ignoreEncryption: true });
+    const copied = await out.copyPages(src, src.getPageIndices());
+    copied.forEach(p => out.addPage(p));
+  }
+  setProgress(95, 'Saving merged PDF…');
+  const bytes = await out.save();
+  setProgress(100, 'Done!');
+  const blob = new Blob([bytes], {type:'application/pdf'});
+  showResult(`Merged ${currentFiles.length} files — ${out.getPageCount()} total pages`,
+    [{blob, name:'merged.pdf'}]);
+}
+
+// ─────────────────────────────────────────
+// 3. PDF SPLIT
+// ─────────────────────────────────────────
+async function splitPDF() {
+  setProgress(10, 'Loading PDF…');
+  const buf = await readFile(currentFiles[0]);
+  const src = await PDFDocument.load(buf, { ignoreEncryption: true });
+  const total = src.getPageCount();
+  const infoEl = document.getElementById('split-page-info');
+  if (infoEl) infoEl.textContent = `PDF has ${total} page${total>1?'s':''}`;
+  const mode = document.getElementById('split-mode')?.value || 'range';
+
+  if (mode === 'all') {
+    setProgress(20, 'Splitting into individual pages…');
+    const zip = new JSZip();
+    for (let i = 0; i < total; i++) {
+      setProgress(20 + Math.round((i/total)*70), `Extracting page ${i+1}/${total}…`);
+      const doc = await PDFDocument.create();
+      const [pg] = await doc.copyPages(src, [i]);
+      doc.addPage(pg);
+      const bytes = await doc.save();
+      zip.file(`page_${String(i+1).padStart(3,'0')}.pdf`, bytes);
+    }
+    setProgress(95, 'Creating ZIP…');
+    const zipBlob = await zip.generateAsync({type:'blob'});
+    setProgress(100,'Done!');
+    const baseName = currentFiles[0].name.replace(/\.pdf$/i,'');
+    showResult(`Split into ${total} pages — downloading as ZIP`, [{blob:zipBlob, name:baseName+'_pages.zip'}]);
+  } else {
+    const raw = document.getElementById('split-pages')?.value || '';
+    const indices = [];
+    for (const part of raw.split(',')) {
+      const t2 = part.trim();
+      if (!t2) continue;
+      if (t2.includes('-')) {
+        const [a,b] = t2.split('-').map(x=>parseInt(x.trim()));
+        if (isNaN(a)||isNaN(b)||a<1||b>total||a>b) { showError(`Invalid range "${t2}". Pages are 1–${total}.`); return; }
+        for (let i=a;i<=b;i++) indices.push(i-1);
+      } else {
+        const n = parseInt(t2);
+        if (isNaN(n)||n<1||n>total) { showError(`Page ${t2} is out of range (1–${total}).`); return; }
+        indices.push(n-1);
+      }
+    }
+    if (!indices.length) { showError('Enter page numbers or ranges (e.g. 1-3, 5).'); return; }
+    setProgress(60, 'Extracting pages…');
+    const doc = await PDFDocument.create();
+    const copied = await doc.copyPages(src, indices);
+    copied.forEach(p => doc.addPage(p));
+    setProgress(90, 'Saving…');
+    const bytes = await doc.save();
+    setProgress(100,'Done!');
+    const blob = new Blob([bytes],{type:'application/pdf'});
+    const baseName = currentFiles[0].name.replace(/\.pdf$/i,'');
+    showResult(`Extracted ${indices.length} page${indices.length>1?'s':''}`, [{blob, name:baseName+'_extracted.pdf'}]);
+  }
+}
+
+// ─────────────────────────────────────────
+// 4. PDF TO JPG
+// ─────────────────────────────────────────
+async function pdfToJpg() {
+  setProgress(10, 'Loading PDF…');
+  const buf = await readFile(currentFiles[0]);
+  const pdf = await pdfjsLib.getDocument({data: new Uint8Array(buf)}).promise;
+  const total = pdf.numPages;
+  const mode = document.getElementById('jpg-pages')?.value || 'all';
+  const scale = parseFloat(document.getElementById('jpg-scale')?.value || 2);
+  const pagesToConvert = mode === 'first' ? [1] : Array.from({length:total},(_,i)=>i+1);
+
+  if (pagesToConvert.length === 1) {
+    setProgress(40, 'Rendering page…');
+    const page = await pdf.getPage(1);
+    const vp = page.getViewport({scale});
+    const canvas = document.createElement('canvas');
+    canvas.width = vp.width; canvas.height = vp.height;
+    await page.render({canvasContext: canvas.getContext('2d'), viewport: vp}).promise;
+    setProgress(90,'Encoding…');
+    canvas.toBlob(blob => {
+      setProgress(100,'Done!');
+      const baseName = currentFiles[0].name.replace(/\.pdf$/i,'');
+      showResult('Converted first page to JPG', [{blob, name:baseName+'_page1.jpg'}]);
+    }, 'image/jpeg', 0.92);
+  } else {
+    const zip = new JSZip();
+    for (let i = 0; i < pagesToConvert.length; i++) {
+      setProgress(10 + Math.round((i/total)*80), `Rendering page ${i+1}/${total}…`);
+      const page = await pdf.getPage(pagesToConvert[i]);
+      const vp = page.getViewport({scale});
+      const canvas = document.createElement('canvas');
+      canvas.width = vp.width; canvas.height = vp.height;
+      await page.render({canvasContext: canvas.getContext('2d'), viewport: vp}).promise;
+      const jpgData = await new Promise(res => canvas.toBlob(b => {
+        const reader = new FileReader();
+        reader.onload = e => res(e.target.result.split(',')[1]);
+        reader.readAsDataURL(b);
+      }, 'image/jpeg', 0.92));
+      zip.file(`page_${String(i+1).padStart(3,'0')}.jpg`, jpgData, {base64:true});
+    }
+    setProgress(94,'Creating ZIP…');
+    const zipBlob = await zip.generateAsync({type:'blob'});
+    setProgress(100,'Done!');
+    const baseName = currentFiles[0].name.replace(/\.pdf$/i,'');
+    showResult(`Converted ${total} pages to JPG — downloading as ZIP`, [{blob:zipBlob, name:baseName+'_images.zip'}]);
+  }
+}
+
+// ─────────────────────────────────────────
+// 5. PDF TO WORD (text extraction)
+// ─────────────────────────────────────────
+async function pdfToWord() {
+  setProgress(10, 'Loading PDF…');
+  const buf = await readFile(currentFiles[0]);
+  const pdf = await pdfjsLib.getDocument({data: new Uint8Array(buf)}).promise;
+  const sep = document.getElementById('sep-style')?.value || 'dashes';
+  let fullText = '';
+  for (let i = 1; i <= pdf.numPages; i++) {
+    setProgress(10 + Math.round((i/pdf.numPages)*85), `Extracting text from page ${i}/${pdf.numPages}…`);
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    let pageText = '';
+    let lastY = null;
+    for (const item of content.items) {
+      if ('str' in item) {
+        if (lastY !== null && Math.abs(item.transform[5] - lastY) > 5) pageText += '\n';
+        pageText += item.str;
+        lastY = item.transform[5];
+      }
+    }
+    if (sep === 'dashes' && pdf.numPages > 1) fullText += `\n--- Page ${i} ---\n${pageText}\n`;
+    else if (sep === 'newlines' && pdf.numPages > 1) fullText += `\n\n${pageText}\n`;
+    else fullText += pageText + '\n';
+  }
+  setProgress(100, 'Done!');
+  const blob = new Blob([fullText.trim()], { type: 'text/plain;charset=utf-8' });
+  const baseName = currentFiles[0].name.replace(/\.pdf$/i,'');
+  showResult(`Extracted text from ${pdf.numPages} pages`, [{ blob, name: baseName+'_text.txt' }]);
+}
+
+// ─────────────────────────────────────────
+// 6. WORD / DOCX / TXT / HTML → PDF
+// ─────────────────────────────────────────
+async function wordToPDF() {
+  setProgress(10, 'Reading file…');
+  const file = currentFiles[0];
+  const ext = file.name.split('.').pop().toLowerCase();
+  let plainText = '';
+
+  if (ext === 'docx') {
+    setProgress(25, 'Extracting text from Word document…');
+    const buf = await readFile(file);
+    let result;
+    try { result = await mammoth.extractRawText({ arrayBuffer: buf }); }
+    catch(e) { showError('Could not read this .docx file. Make sure it is a valid Word document.'); return; }
+    plainText = result.value;
+    if (result.messages && result.messages.length) console.log('Mammoth warnings:', result.messages);
+    if (!plainText.trim()) { showError('No readable text found in this .docx file.'); return; }
+  } else if (ext === 'html' || ext === 'htm') {
+    const raw = await file.text();
+    plainText = raw
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/p>/gi, '\n\n')
+      .replace(/<\/div>/gi, '\n')
+      .replace(/<\/h[1-6]>/gi, '\n\n')
+      .replace(/<[^>]*>/g, '')
+      .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+      .replace(/\t/g, '    ');
+  } else {
+    plainText = await file.text();
+  }
+
+  setProgress(40, 'Creating PDF…');
+  const pageSize = document.getElementById('w2p-page').value;
+  const [pageW, pageH] = pageSize === 'letter' ? [612, 792] : [595, 842];
+  const fontSize = parseInt(document.getElementById('w2p-size').value) || 12;
+  const margin = 55;
+  const maxW = pageW - margin * 2;
+  const lineH = fontSize * 1.55;
+
+  const doc = await PDFDocument.create();
+  const font = await doc.embedFont(StandardFonts.Helvetica);
+
+  const cleaned = plainText
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/\u2013/g, '-').replace(/\u2014/g, '--')
+    .replace(/\u2026/g, '...')
+    .replace(/[^\x00-\xFF]/g, ' ')
+    .replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+  const paragraphs = cleaned.split('\n');
+  const lines = [];
+
+  for (const para of paragraphs) {
+    if (!para.trim()) { lines.push({ text: '', empty: true }); continue; }
+    const words = para.split(' ').filter(w => w !== '');
+    let cur = '';
+    for (const word of words) {
+      const test = cur ? cur + ' ' + word : word;
+      let w = 0;
+      try { w = font.widthOfTextAtSize(test, fontSize); } catch(e) { cur = cur ? cur + ' ' : ''; continue; }
+      if (w > maxW && cur) { lines.push({ text: cur }); cur = word; }
+      else cur = test;
+    }
+    if (cur) lines.push({ text: cur });
+  }
+
+  setProgress(68, 'Laying out pages…');
+  const linesPerPage = Math.floor((pageH - margin * 2) / lineH);
+  let li = 0;
+
+  while (li < lines.length) {
+    const page = doc.addPage([pageW, pageH]);
+    let y = pageH - margin;
+    for (let row = 0; row < linesPerPage && li < lines.length; row++, li++) {
+      if (!lines[li].empty && lines[li].text.trim()) {
+        try {
+          page.drawText(lines[li].text, { x: margin, y, font, size: fontSize, color: rgb(0.05, 0.05, 0.05) });
+        } catch(e) { /* skip unencodable line */ }
+      }
+      y -= lineH;
+    }
+  }
+
+  setProgress(92, 'Saving PDF…');
+  const bytes = await doc.save();
+  setProgress(100, 'Done!');
+  const blob = new Blob([bytes], { type: 'application/pdf' });
+  const outName = file.name.replace(/\.(docx|txt|html|htm)$/i, '') + '.pdf';
+  showResult(`Converted to PDF — ${doc.getPageCount()} page${doc.getPageCount()>1?'s':''}`, [{ blob, name: outName }]);
+}
+</script>
+</body>
+</html>
